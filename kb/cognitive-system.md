@@ -6,9 +6,9 @@ stato: bozza
 
 Unità di analisi proposta da Edwin Hutchins per studiare la cognizione dove
 accade davvero: non dentro la testa di un singolo individuo, ma
-nell'accoppiamento tra persone, artefatti e ambiente. Un sistema cognitivo è «a
-collection of individuals and artifacts and their relations to each other in a
-particular work practice». La tesi di Hutchins è che la cognizione è
+nell'accoppiamento tra persone, artefatti e ambiente. Un sistema cognitivo
+comprende individui, artefatti e le relazioni che li legano in una pratica di
+lavoro. La tesi di Hutchins è che la cognizione è
 _distribuita_ — non solo tra le persone di un gruppo, ma tra persone e
 strumenti, tra mente e mondo.
 
@@ -16,19 +16,18 @@ Cosa si distribuisce non è solo l'informazione ma anche i processi:
 rappresentazioni e trasformazioni si propagano attraverso agenti e artefatti in
 sequenza. Hutchins lo dimostra sulla navigazione navale — tracciare una rotta
 non è il lavoro di nessuna mente singola, ma del sistema composto da equipaggio,
-grafici, strumenti e procedure condivise. «Cognition is not locked inside
-individual minds, but unfolds in the interaction between people, tools, and
-context».
+grafici, strumenti e procedure condivise. Non è quindi rinchiusa nella mente
+individuale: va analizzata nella propagazione delle rappresentazioni attraverso
+persone, strumenti e contesto.
 
 Norman converge sulla stessa conclusione, ed è una convergenza interna alla
-stessa famiglia UCSD: quando una persona usa un artefatto cognitivo, «the person
-and the artifact become a system in which cognition is distributed between the
-person and the device, creating a system with expanded and enhanced capabilities
-over the individual alone». L'artefatto non è un'estensione della mente — è un
+stessa famiglia UCSD: persona e artefatto formano un sistema le cui capacità
+superano quelle dell'individuo isolato. L'artefatto non è un'estensione della
+mente — è un
 componente del sistema cognitivo che trasforma ciò che il sistema è capace di
 fare. In _Things That Make Us Smart_ (Cap. 6) Norman tratta la cognizione
-distribuita _citando Hutchins_: «the world remembers by being there», il mondo
-trattiene lo stato per il solo fatto di esserci — eco diretta della membrana
+distribuita _citando Hutchins_: il mondo ricorda per noi trattenendo lo stato —
+eco diretta della membrana
 `world` — e gli errori condivisi nel sistema diventano occasione di
 apprendimento rigenerativo.
 
@@ -60,7 +59,7 @@ come vincolo di progetto.
 Nel metodo il sistema cognitivo è l'accoppiamento che prende vita a ogni
 sessione: artefatto (la KB, lo strato output, lo strato input) + umano + LLM +
 harness tecnico. È dove la cognizione del metodo accade. Non è portabile —
-emerge dall'uso e si scioglie quando la sessione finisce.
+emerge dall'uso e viene ricomposto quando cambiano sessione, agenti o harness.
 
 Questo lo distingue dall'artefatto cognitivo, che invece è portabile: il repo
 sopravvive al cambio di modello, al cambio di harness, al cambio di utente. Il
@@ -74,10 +73,11 @@ leggono l'artefatto. Il caso saliente — quello su cui il metodo si è formato 
 il binomio umano + LLM, che resta vero come caso di una popolazione di agenti
 più ampia (cfr. `agent`). Per l'umano l'artefatto è impalcatura esterna a un
 modello mentale che possiede già — un promemoria, un ancoraggio. Per l'LLM
-l'artefatto _è_ il modello mentale: riparte da zero a ogni sessione e non ha
-altra fonte. Lo user's model di Norman (cfr. `system-image`) coincide, per
-l'LLM, con il system image — l'intero artefatto, di cui la KB è il nucleo
-formalizzato — non c'è strato intermedio.
+l'artefatto è il principale modello persistente: non porta memoria affidabile
+tra sessioni e integra il repo con richiesta corrente, strumenti e segnali del
+Mondo. Lo user's model di Norman deriva quindi soprattutto dal system image —
+l'intero artefatto, di cui la KB è il nucleo formalizzato — ma non coincide
+letteralmente con esso.
 
 Questa asimmetria ha conseguenze di progetto: l'artefatto deve essere
 autosufficiente per l'agente che non porta nulla, senza per questo essere
@@ -132,7 +132,7 @@ sopravvivenza al cambio di modello si regge su questa distinzione.
 ## Riferimenti
 
 - Edwin Hutchins, _Cognition in the Wild_ (MIT Press, 1995) — fonte primaria sul
-  sistema cognitivo come unità di analisi; ora reperito e sourced (cfr. la
+  sistema cognitivo come unità di analisi (cfr. la
   sezione fonti di `world.md`, qualità OCR media: verificare le citazioni
   verbatim sulla scansione). Citare per capitolo; cap. 9 per la sintesi (non
   scambiare le proprietà del sistema socioculturale per quelle della mente

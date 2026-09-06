@@ -66,32 +66,23 @@ Il cruscotto di lavoro è la coppia [`o1/plan.md`](o1/plan.md) (lato esecuzione:
 
 ## Funzioni del repo
 
-- **Metodo portabile**: nodi in `kb/` che descrivono ricetta metodologica, la cornice di augmentation che contiene i riferimenti (Engelbart, con lo Zettelkasten come unità atomica, il ciclo di azione di Norman come interfaccia col Mondo e il pattern Karpathy come istanza contemporanea della gamba di manutenzione), struttura di progetto, strato output (o1/o2/o3) e input (i1/i2/i3), strumenti, fedeltà cognitiva e principi.
-- **Osservatorio cross-repo**: confronto periodico tra i progetti adottanti per leggere convergenze, drift, duplicazioni, lacune e specificità locali senza sostituirsi alla loro coda di lavoro; il battito è l'audit mensile `/adottanti` (runtime-o1), col verdetto aggregato in [`i3/audit-adottanti.md`](i3/audit-adottanti.md).
-- **Strumenti comuni**: `o3/kb_tools.py` come backend portabile per audit strutturale, backlink, copertura del catalogo, migrazione, candidati terminologici e segnali generici sui progetti code-based. `/kb audit` usa questi controlli deterministici; `/kb review` aggiunge la revisione semantica qualitativa. Il quartetto operativo — `/eval`, `/exec`, `/kb`, `/commit` — e la skill di allineamento `/method` vivono in `.claude/skills/` (con wrapper Codex in `.codex/skills/`): `metodo` fa dogfooding ed è la copia canonica che gli adottanti forkano.
-- **Manutenzione propria del metodo**: task in `o2/` solo quando riguardano questo repo, la sua presentazione, la coerenza dei nodi o una generalizzazione già emersa dai repo adottanti.
-- **Presentazione**: [`presentation/`](presentation/) raccoglie l'intera superficie presentativa. [`presentation/index.html`](presentation/index.html) è la home statica della system image, generata da `README.md`, dai register `goal.md`/`world.md` (l'intro di ciascuno è il polo) e da `o1/plan.md` con `o3/build-system-image.sh`; apre il ciclo Goal/Plan/Specify/Compare/Interpret/World e punta alle viste. [`i2/`](i2/interpretations.md) è la collezione sorgente dello stadio i2; [`i2/metodo-in-sintesi.md`](i2/metodo-in-sintesi.md) ne è la sintesi principale — i diagrammi che reggono il metodo intero. Il `.md` è la fonte unica; `o3/build-presentation.sh` genera `presentation/interpretations.html`, la vista navigabile a slide della collezione, apribile direttamente dal checkout. Lo stesso script genera `presentation/tasks.html` e `presentation/verdict.html`; gli asset comuni stanno in `presentation/assets/`. Il PDF per stampa/distribuzione (o3) esce dall'export della vista a slide e non viene versionato.
+- **Metodo portabile** — il modello e la ricetta vivono nei nodi indicizzati da
+  [`kb/kb.md`](kb/kb.md).
+- **Osservatorio cross-repo** — il protocollo vive in
+  [`method-observatory`](kb/method-observatory.md); il verdetto corrente in
+  [`i3/audit-adottanti.md`](i3/audit-adottanti.md).
+- **Strumenti comuni** — esecutori e runbook sono registrati in
+  [`o3/prescriptions.md`](o3/prescriptions.md); capacità e limiti in
+  [`kb-tools`](kb/kb-tools.md) e [`skill`](kb/skill.md).
+- **Presentazione** — le viste generate vivono in [`presentation/`](presentation/)
+  e la disciplina della derivazione in [`view`](kb/view.md).
 
 ## Come collegare un nuovo progetto
 
 I progetti adottanti sono il Mondo runtime, indicizzati nel register
-[`world.md`](world.md). Per collegarne uno nuovo:
-
-1. Crea il symlink `method/` verso i nodi canonici: `ln -s ../method/kb method`
-   dalla root del progetto, e aggiungilo al register `world.md` di `metodo`.
-2. Scrivi la **sezione README canonica** ([readme](kb/readme.md)): `## Metodo`
-   con la dichiarazione di adozione, il symlink `method/` e i puntatori ai due
-   register dei poli — poi crea `goal.md` e `world.md` del dominio ([goal](kb/goal.md),
-   [world](kb/world.md)): l'intro di ciascuno è il polo in sintesi che la home
-   rende. È la dichiarazione _una-volta_ della dipendenza generale dal metodo.
-3. Aggancia il metodo all'hub
-   [`cognitive-artifact-design.md`](kb/cognitive-artifact-design.md), unico nome
-   di nodo assunto stabile, e aggiungi la sezione con i principi specifici del
-   progetto. **Non** replicare in `CLAUDE.md` un inventario di path interni del
-   metodo: collega un nodo solo dove una regola o uno strumento locale dipende
-   davvero da quella specifica — dipendenza intenzionale, non accidentale (cfr.
-   [method-development](kb/method-development.md), «Il confine canone↔adottante:
-   dichiara e taci»).
-4. Dichiara gli strati input/output e le superfici della membrana del dominio
-   in `world.md`; crea symlink o mount host-local solo quando il progetto viene
-   messo in uso, con nomi fisici descrittivi.
+[`world.md`](world.md). Il protocollo d'ingresso vive in
+[`method-observatory`](kb/method-observatory.md); la forma della sezione Metodo,
+dei due register e delle connessioni intenzionali vive in
+[`readme`](kb/readme.md), [`goal-register`](kb/goal-register.md),
+[`world-register`](kb/world-register.md) e
+[`method-development`](kb/method-development.md).

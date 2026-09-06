@@ -92,9 +92,9 @@ Analisi periodiche:
 ## Protocollo d'ingresso di un adottante
 
 Ammettere un progetto nel territorio è un'operazione dell'osservatorio, non
-soltanto l'aggiunta di una voce a `world.md`. Il protocollo resta una checklist
-qui, senza skill autonoma: ingressi ripetuti hanno giustificato una forma
-stabile, non ancora una nuova automazione.
+soltanto l'aggiunta di una voce a `world.md`. Il protocollo resta qui come
+reference stabile; `/adottanti` lo applica quando prepara il primo giro, senza
+duplicarlo né trasformarlo in una seconda procedura.
 
 ### 1. Verifica l'adozione locale
 

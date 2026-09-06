@@ -104,44 +104,8 @@ tenere onesta la system image, non l'unicità del supporto. Il medium resta una
 decisione tecnica reversibile; se una superficie degrada, il fallback è un altro
 supporto world, non il ritorno a substrato.
 
-## Il register `world.md`
-
-Il polo World ha un register versionato nella root: **`world.md`**, gemello di
-`goal.md` (il goal è il nord, il world è il territorio — cfr. `goal`). È
-l'indice del Mondo che l'artefatto, con i suoi goal, ritiene rilevante: non
-versiona il mondo (che persiste da sé), ne versiona la _vista_.
-
-Il register **assorbe due file che il canone teneva separati**:
-
-- `map.md` — l'indice-di-dominio (entità, sistemi, flussi, attori legati ai
-  nodi) _era già_ un indice del territorio, cioè del Mondo; la struttura interna
-  del repository è già visibile nella root. Ciò che resta di insostituibile è il
-  territorio: vive qui.
-- `sources.md` — il registro di provenienza delle fonti-mondo autorevoli
-  (`source-of-truth`) era «sibling di `map.md`»: i sibling si fondono nella
-  sezione fonti del register del polo, che continua ad alimentare i `##
-Riferimenti` dei nodi (i3).
-
-La forma segue un **contratto machine-readable** condiviso con `goal.md`:
-l'**intro** (dall'H1 al primo H2) è il polo in sintesi — di che cosa è fatto il
-Mondo di questo artefatto — ed è ciò che la home rende come polo World, markdown
-fedele senza euristiche (cfr. `readme`); le sezioni successive sono la
-profondità on-demand, tipicamente:
-
-- **superfici della membrana** — quali superfici fisiche esistono e dove puntano
-  (`gdrive/`, mount, sync, sistemi esterni), dichiarate una volta;
-- **territorio** — entità, sistemi, fonti di verità e attori, legati ai nodi che
-  li spiegano (l'eredità di `map.md`: in un repo tecnico host e flussi, in un
-  dominio finanziario conti ed entità, in uno riflessivo assi e pratica);
-- **fonti** — la provenienza delle fonti-mondo autorevoli: quale edizione regge
-  quale nodo (l'eredità di `sources.md`).
-
-Le regole ereditate restano: porta on-demand (non la bussola, che è il README),
-non diventa storico né lista di task, non sostituisce il catalogo `kb/kb.md`
-(che indicizza i nodi, non il territorio). A differenza di `map.md`, che
-esisteva solo «dove il dominio ha un territorio da indicizzare», `world.md` c'è
-in ogni repo: ogni artefatto ha un Mondo — varia la taglia del territorio, non
-l'esistenza del polo.
+Il contratto del register root che rende indirizzabile questo polo vive in
+`world-register`; qui resta il modello del Mondo e della sua membrana.
 
 ## Configurazioni ricorrenti della cerniera bassa
 
@@ -166,27 +130,10 @@ Le tre non esauriscono lo spettro e un adottante può starne a cavallo. Ciò che
 resta invariante è la meccanica: l'atto e il grezzo nel Mondo, i due riflessi
 versionati on-demand.
 
-## Il Mondo del metodo
-
-`metodo` è un meta-artefatto e ha due Mondi distinti. Il _Mondo runtime_ è
-composto da due superfici: i progetti adottanti e le fonti teoriche su Drive.
-Dagli adottanti entrano esigenze, drift e convergenze; lì tornano il filing back
-e la propagazione. Dalle fonti entra il pavimento concettuale che regge il
-canone, e il register `world.md` ne conserva la provenienza. Entrambe le
-superfici sono **dichiarate nel register, non versionate**: `gdrive/` è un
-symlink host-local gitignorato e i repository adottanti sono checkout locali o
-remoti elencati nel territorio, non raccolti in un symlink root `world/`. Nei
-repository mantenuti dal custode, un agente da lui incaricato può modificare
-direttamente il canone attraverso il symlink `method/`: ownership e
-autorizzazione, non il percorso tecnico, determinano il confine. Un adottante
-mantenuto da terzi propone invece le modifiche con una pull request; diff e
-razionale della PR sono il segnale persistente valutato da `metodo`. Il _Mondo
-di sviluppo_ sono i nodi `kb/` e la loro coerenza: un commit agisce sui nodi,
-lint e audit ne percepiscono la risposta.
-
 Connessioni:
 
 - [action-cycle](action-cycle.md)
+- [world-register](world-register.md)
 - [goal](goal.md)
 - [output](output.md)
 - [input](input.md)

@@ -74,6 +74,28 @@ adottanti a ogni rinomina — esattamente il coupling che «dichiara e taci»
 (`method-development`) aveva abolito e che il README vieta. Ora la regola rimanda
 alle sole connessioni intenzionali.
 
+## Il giro successivo: i register dei poli diventano nodi
+
+Un secondo test di potatura, sullo stesso principio del primo (funzioni a ritmo
+di cambiamento diverso vanno separate), porta la rete da 46 a **48 nodi**. `goal.md`
+e `world.md` (nodi) trattenevano ciascuno due funzioni: il modello del polo e il
+contratto machine-readable del register root omonimo. La seconda si stacca in
+`goal-register` e `world-register`; il nodo-modello resta, con un rimando invece
+della sezione intera. Il README, che ancora narrava per esteso funzioni del repo,
+esempi per artefatto e protocollo di collegamento — tre copie della stessa
+spiegazione insieme al catalogo e ai nodi — si riduce a router puro verso
+`kb/kb.md`, `method-observatory`, `kb-tools`/`skill`, `view` e i due register
+nuovi; l'inventario degli esempi per artefatto (già in `world-register`'s
+territorio) esce da `goal.md`. Il register root `world.md` guadagna una sezione
+sulle fonti citate senza superficie primaria locale osservabile in questo
+checkout (2026-09-06): la provenienza resta dichiarata, la verifica verbatim è
+sospesa finché `gdrive/` non le rende leggibili di nuovo — stessa disciplina già
+applicata al capitolo di `action-cycle` nel giro precedente.
+
+Audit, inventory, coverage e facets restano verdi (48/48 nodi con frontmatter e
+footer, 0 link rotti, 0 nodi isolati). Non si apre un debito nuovo: è lo stesso
+tipo di lavoro del giro precedente, non un cambiamento di verdetto.
+
 Il presidio deterministico continua a vivere nello strumento: `kb_tools`
 verifica footer, catalogo e link anche fuori dall'inventario dei nodi, e il nodo
 `kb-tools` copre ora anche il sottocomando `tasks`, che la documentazione aveva

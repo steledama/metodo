@@ -61,5 +61,7 @@ Connessioni:
 - [project-structure](project-structure.md)
 - [method-development](method-development.md)
 - [goal](goal.md)
+- [goal-register](goal-register.md)
 - [world](world.md)
+- [world-register](world-register.md)
 - [design-principles](design-principles.md)

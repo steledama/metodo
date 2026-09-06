@@ -45,7 +45,8 @@ verifica empirica in `action-cycle-matrix`.
 - Donald Norman, _The Design of Everyday Things_, Revised and Expanded Edition
   (Basic Books, 2013), Cap. 2 "The Psychology of Everyday Actions" — il ciclo a
   sette stadi, i due gulf e le proprietà cardine della superficie di decisione.
-  Provenienza nella sezione fonti del register `world.md`.
+  Provenienza nella sezione fonti del register `world.md`; la copia primaria
+  usata per la distillazione non è osservabile nella superficie locale corrente.
 
 Connessioni:
 

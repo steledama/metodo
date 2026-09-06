@@ -5,14 +5,10 @@ stato: bozza
 # Development goal
 
 Il polo Goal del **ciclo di sviluppo** (Goal-dev, cfr. `development-meta-cycle`)
-non è solo contenuto di dominio: condivide **dimensioni comuni a tutti gli
+condivide **dimensioni comuni a tutti gli
 artefatti**, e ogni progetto _fotografa_ — più che «definisce» — la propria
 **posizione auspicata** lungo quelle dimensioni. Il dominio non determina le
-dimensioni: determina la **gradualità** scelta su ciascuna. È la
-generalizzazione che mancava al polo, e la cui assenza lo teneva
-sotto-articolato — la cella Goal-dev declassata a D in `action-cycle-matrix`,
-mescolata col Goal runtime perché il contenuto dev-specifico non era formulato
-da nessuna parte.
+dimensioni: determina la **gradualità** scelta su ciascuna.
 
 ## Perché le dimensioni guardano il runtime
 
@@ -24,11 +20,9 @@ luogo dove vivono le richieste su come il runtime debba comportarsi — il che
 spiega perché «portabilità» suoni di runtime pur essendo _voluta dallo_
 sviluppo.
 
-Da qui si scioglie lo split lasciato provvisorio dal gate. Il **Goal-runtime**
+Il **Goal-runtime**
 raccoglie gli obiettivi _costitutivi_ del runtime — ciò per cui l'artefatto in
-opera esiste (per `salute`, stare bene; per `metodo`, portabilità, indipendenza
-dal modello, adattabilità, autocorrezione, rigore delle fonti, pavimento
-teorico). Il **Goal-dev** raccoglie la _posizione auspicata_ lungo le dimensioni
+opera esiste. Il **Goal-dev** raccoglie la _posizione auspicata_ lungo le dimensioni
 comuni: non _cosa_ il runtime persegue, ma _con quale forma_ lo persegue. I due
 poli sono entrambi rivolti al runtime — è la cucitura a renderli tali — ma uno
 tiene lo scopo, l'altro la forma; ed è la forma il contenuto dev-specifico che
@@ -76,7 +70,7 @@ profonde sono quelle che scompaiono», 1991) e dello strumento trasparente.
 
 Due precisazioni lo tengono onesto. È un **asintoto, non un bersaglio
 obbligato**: la gradualità resta di dominio — dove il Goal-runtime vuole l'umano
-dentro il giro per costituzione (`salute`: il motivo non è esternalizzabile),
+dentro il giro perché il motivo non è esternalizzabile,
 l'invisibilità si declina come attrito zero della macchina, non come assenza
 dell'umano. E misura la **macchina**, non lo scopo: un artefatto invisibile con
 goal sbagliati è solo un errore che gira da solo.
@@ -102,15 +96,13 @@ Riempire la posizione auspicata _di ciascun adottante_ resta lavoro suo:
 `metodo` dà le dimensioni comuni, non la fotografia altrui — tenerne qui un
 elenco sarebbe la seconda rappresentazione che deriva in silenzio. La fotografia
 ha una **casa dichiarata**: la sezione «Goal di sviluppo» del register root
-`goal.md` dell'adottante (cfr. `goal`) — la prima istanza è nata in `bi` insieme
-al register stesso. È teoria dall'alto, ancorata a un disagio reale (la cella
-Goal-dev mal-filed) e tenuta dalla guardia dal-basso contro la
-sovra-ingegnerizzazione (`method-development`): le dimensioni restano candidate
-finché l'uso non le conferma.
+`goal.md` dell'adottante (cfr. `goal-register`). Le dimensioni restano candidate
+finché l'uso nei domini non ne conferma sufficienza e confini.
 
 Connessioni:
 
 - [goal](goal.md)
+- [goal-register](goal-register.md)
 - [action-cycle](action-cycle.md)
 - [development-meta-cycle](development-meta-cycle.md)
 - [action-cycle-matrix](action-cycle-matrix.md)

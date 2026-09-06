@@ -59,5 +59,6 @@ Connessioni:
 - [cognitive-artifact-design](cognitive-artifact-design.md)
 - [cognitive-fidelity](cognitive-fidelity.md)
 - [world](world.md)
+- [world-register](world-register.md)
 - [kb-tools](kb-tools.md)
 - [knowledge-base](knowledge-base.md)

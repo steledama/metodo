@@ -59,17 +59,21 @@ pandoc -f epub -t plain "<file>.epub" -o "<file>.txt"   # per gli EPUB
 pdftotext "<file>.pdf" "<file>.txt"                      # per i PDF
 ```
 
-### Fonti presenti
+### Fonti registrate
 
-- **The Design of Everyday Things** — Revised and Expanded, 2013, EPUB, ISBN 978-0465050659.
+- **The Design of Everyday Things** — Revised and Expanded, 2013, ISBN 978-0465050659.
   Fonte canonica per `action-cycle` (Cap. 2, il ciclo a sette stadi), `system-image` e
   `affordance-signifier` (entrambi Cap. 1) e `goal` (Cap. 2). L'ed. 2013 è quella che
-  **aggiunge** affordance e signifier rispetto all'orig. 1988. Scelto l'EPUB (testo nativo riflowabile) come miglior
-  i1 per la distillazione.
+  **aggiunge** affordance e signifier rispetto all'orig. 1988. L'EPUB usato per
+  la distillazione non è osservabile nella superficie `gdrive/` corrente al
+  2026-09-06: la provenienza resta valida, la verifica verbatim è sospesa finché
+  la copia non viene ripristinata o sostituita con una fonte primaria leggibile.
 - **Emotional Design — Why We Love (or Hate) Everyday Things** — 2004, PDF, ISBN
   978-0465051366. Fonte di `processing-layers` (i tre livelli visceral/behavioral/
-  reflective, modello sviluppato con Ortony e Revelle); copia unica, strato testo
-  verificato.
+  reflective, modello sviluppato con Ortony e Revelle). La copia usata per la
+  distillazione non è osservabile nella superficie `gdrive/` corrente al
+  2026-09-06; fino al ripristino, il nodo conserva una provenienza dichiarata ma
+  non una verifica locale ripetibile.
 - **Things That Make Us Smart: Defending Human Attributes in the Age of the Machine** — Don
   Norman, originale **1993** (Addison-Wesley, ISBN 978-0201626957). **Volume integrale ora
   reperito** nella riedizione **Diversion Books, dicembre 2014** (ISBN 978-1-62681-537-7),
@@ -160,10 +164,26 @@ pdftotext "<file>.pdf" "<file>.txt"                      # per i PDF
   cattura in `i1/`. **§3.5 sorzata in `kb/goal.md`**: confermata la distinzione
   attività/motivo, azione/goal o scopo cosciente, operazione/condizioni.
 
+### Fonti citate senza superficie primaria locale
+
+- Donald Norman, «Cognitive Artifacts», in J. Carroll (ed.), _Designing
+  Interaction_ (Cambridge University Press, 1991), citato da
+  `kb/cognitive-system.md`: provenienza bibliografica registrata, testo primario
+  non presente in `gdrive/`.
+- Niklas Luhmann, «Kommunikation mit Zettelkästen» (1981), e Robert M. Pirsig,
+  _Lila_ (1991), citati da `kb/zettelkasten.md`: provenienza bibliografica
+  registrata, testi primari non presenti in `gdrive/`.
+- Il post pubblico da cui deriva il nome `karpathy-pattern` non ha ancora una
+  superficie primaria identificata nel register. Il nodo va quindi letto come
+  formalizzazione metodologica locale, non come citazione verificata di una
+  fonte disponibile.
+
 ### Copertura fondativa
 
-Non restano debiti di fonte fondativi: la cornice di augmentation (Engelbart),
-il pavimento ontologico (Hutchins, Clark e Norman) e la gerarchia del Goal
-(Leontiev) hanno una fonte primaria registrata e una distillazione nei nodi
-indicati sopra. Letture ulteriori restano esplorazione on-demand, non lavoro
-futuro implicito in questo register.
+La cornice di augmentation (Engelbart), la parte Hutchins/Clark del pavimento
+ontologico e la gerarchia del Goal (Leontiev) hanno una fonte primaria
+registrata, disponibile localmente e distillata nei nodi indicati. Restano
+invece i limiti dichiarati sopra: due opere di Norman non sono osservabili sulla
+superficie corrente e alcune citazioni hanno provenienza bibliografica ma non
+testo primario locale. Il register fotografa questi limiti senza trasformarli in
+una certificazione negativa sulla disponibilità esterna delle opere.

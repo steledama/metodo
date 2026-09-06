@@ -44,9 +44,11 @@ forma generale, comune ai due cicli.
 
 Il Goal non viene dalla KB — nasce all'incrocio tra motivo (che viene da sopra,
 dalla vita, dal committente) e KB (che informa, raffina, vincola). Quando la
-valutazione di un ciclo produce un esito, l'i3 lo scrive nella KB; il ciclo
-successivo _legge_ da quella KB e forma il goal del nuovo ciclo. La KB è la
-memoria persistente dove il ciclo si chiude — ma non è la sorgente del motivo.
+valutazione produce un esito, l'i3 lo conserva nel filo finché la tensione resta
+aperta; solo la conoscenza maturata risale nella KB. Il ciclo successivo legge
+l'artefatto persistente — filo corrente e KB stabile — e forma il goal
+successivo. La KB informa il ciclo, ma non è la sorgente del motivo né il
+contenitore automatico di ogni verdetto.
 
 Questa distinzione ha una conseguenza di progetto: la KB e lo strato output
 devono essere _goal-guidati sulla rilevanza, neutri sulla valenza_. I goal
@@ -73,36 +75,9 @@ canovaccio, rende espliciti vincoli e poste e può rivelare Goal latenti. In
 entrambi i casi il segnale arriva da un arco, mentre la formazione del Goal
 resta un atto riflessivo. Conseguenza per il design dell'autonomia: si può
 delegare la chiusura di loop noti (verdetto), ma decidere cosa conta è la cosa
-meno esternalizzabile nell'artefatto. È il criterio che differenzia i domini:
-`nixos` (motivo codificabile, autonomia alta) da `salute` (motivo non
-esternalizzabile, supervisione permanente).
-
-## Esempi per artefatto
-
-Il goal è il polo opposto al Mondo: l'apice contro cui gli input percepiti dal
-fondo del ciclo vengono confrontati. Per ogni artefatto adottante il goal
-sintetizza il motivo che lo muove (di cosa è fatto il Mondo è in `world`). Gli
-esempi sotto illustrano lo spettro, non esauriscono il territorio: quello è
-indicizzato nel register `world.md`.
-
-- `salute`: stare bene, declinato come equilibrio corpo-mente.
-- `economia`: la graduale indipendenza dalla gestione condivisa con la sorella,
-  l'acquisto della casa al mare, la semplificazione degli interessi e
-  l'equilibrio tra entrate e uscite.
-- `nixos`: due goal in tensione — un sistema snello, semplice e minimalista, e
-  insieme un'alta affidabilità (host Svezia e Norvegia intercambiabili,
-  replicabilità) che richiede ridondanza. L'artefatto bilancia il «meno» del
-  minimalismo col «di più» della resilienza.
-- `bi`: propagare ai plugin degli e-commerce gli aggiornamenti di disponibilità
-  e prezzo dell'intero catalogo, e facilitare la gestione del catalogo prodotti.
-- `danea-auto`: tenere affidabile il flusso automatico che porta i dati dal
-  gestionale alla pipeline BI e al catalogo, riducendo il lavoro manuale senza
-  sacrificare freschezza, integrità dei dati e sicurezza della sessione.
-
-Gli esempi mostrano lo spettro di delegabilità: `danea-auto`, `bi` e `nixos`
-hanno goal in larga parte codificabili (autonomia alta), `salute` ed `economia`
-hanno goal radicati in motivi personali non esternalizzabili (supervisione
-permanente).
+meno esternalizzabile nell'artefatto. È il criterio che differenzia un dominio
+dal motivo codificabile e ad alta autonomia da uno personale, il cui motivo
+richiede supervisione permanente.
 
 ## Il Goal come polo simmetrico al Mondo
 
@@ -119,29 +94,23 @@ confrontando l'esito con il goal e formando il goal successivo.
 
 La simmetria è più piena di quanto sembri: entrambe le cerniere sono
 scrivi-poi-leggi attraverso un medium persistente. Al Mondo o3 scrive un effetto
-e i1 lo rilegge più tardi — il mondo trattiene lo stato; al Goal i3 scrive
-l'esito nella KB e il goal successivo lo legge. L'unica vera asimmetria non è
-tra le due cerniere ma tra i due medium: il mondo persiste da solo, la KB
-persiste solo se qualcuno la scrive (cfr. `action-cycle`, `system-image`). Da
-qui il principio gemello di quello del Mondo — un confronto che non si scrive
-nella KB è un task perso — e la ragione per cui la KB ha bisogno di un custode.
+e i1 lo rilegge più tardi — il mondo trattiene lo stato; al Goal i3 conserva il
+verdetto nell'artefatto e il goal successivo lo legge. L'unica vera asimmetria
+non è tra le due cerniere ma tra i due medium: il mondo persiste da solo,
+l'artefatto solo se qualcuno lo scrive (cfr. `action-cycle`, `system-image`). Un
+confronto non registrato è un confronto perso; quando diventa conoscenza stabile
+viene poi depositato nella KB.
 
 Qui il ciclo si chiude e si riapre. Il goal si declina in task — la coda
 operativa che lo realizza — ma i task non vivono in questo nodo né in `metodo`:
 vivono in `o1/plan.md` e `o2/` di ciascun artefatto, perché sono operativi e
 volatili. Ciò che è stabile, e quindi metodologico, è dove avviene il confronto
 da cui i task nascono: la sintesi dello stato corrente che l'i3 mette a paragone
-con il goal. Qualche esempio:
-
-- `economia`: la fotografia dello stato (`stato.md`, scadenze) confrontata con
-  gli obiettivi fa emergere gli scostamenti, e da lì i nuovi task.
-- `salute`: il quadro corporeo con i suoi semafori rende visibili i disequilibri
-  rispetto all'equilibrio corpo-mente; ogni banda gialla o rossa pianifica i
-  task di riequilibrio.
-- `bi`: lo scostamento tra il catalogo pubblicato e i dati di fornitori e Danea
-  genera i task di riallineamento.
-- `nixos`: lo stato del sistema — lentezze, appesantimenti, deriva dal
-  minimalismo — confrontato col goal di snellezza genera i task di pulizia.
+con il goal. Il confronto assume forme diverse secondo il dominio: stato
+osservato contro obiettivi personali, runtime contro configurazione desiderata,
+dati pubblicati contro fonti operative. La configurazione cambia, la meccanica
+resta la stessa: lo scostamento genera lavoro soltanto dopo essere stato
+interpretato e giudicato.
 
 Lo stesso lavoro può nascere anche dall'altro polo: al Mondo un i1 esogeno apre
 un goal nuovo per triage, senza un confronto che lo precede (cfr. «Formazione
@@ -149,57 +118,8 @@ del Goal dai due archi» e `world`). I due poli sono dunque le due sorgenti del
 lavoro: il Goal lo rigenera chiudendo loop noti, il Mondo lo apre con segnali
 inattesi.
 
-## Il register `goal.md`
-
-Il polo Goal ha un register versionato nella root: **`goal.md`**, gemello di
-`world.md` (il goal è il nord, il world è il territorio). Colma il vuoto tra
-fili che spiegano perché qualcosa conta e plan che ordinano il lavoro: rende
-indirizzabile l'obiettivo rispetto al quale un segnale viene giudicato e un task
-viene giustificato. È la cerniera superiore resa esplicita, lo stesso tipo di
-ancoraggio che un runbook offre all'azione.
-
-La forma segue il **contratto machine-readable** condiviso con `world.md`:
-l'**intro** (dall'H1 al primo H2) è il polo in sintesi — il motivo che muove
-l'artefatto — ed è ciò che la home rende come polo Goal; le sezioni successive
-sono la profondità. Il motivo (livello attività) si declina in **obiettivi**
-(livello azione), albero volutamente basso, un livello; ogni obiettivo porta due
-soli aggetti, i due versi della cerniera:
-
-- **segnali** che lo misurano — fili `i3/`, report di substrato, viste: il verso
-  i3 che risale;
-- **stato del lavoro** che lo serve — non l'elenco dei titoli di `o1/plan.md`,
-  ma la sua qualità in una riga (a regime, event-driven, un fronte aperto): il
-  verso o1 che scende.
-
-Il **verso o1 non si trascrive**. La direzione task→obiettivo vive nella colonna
-`Ob.` del plan, dove il task esiste (`plan`); il register la legge, non la
-duplica. Un elenco di titoli qui sarebbe una seconda rappresentazione dello
-stesso fatto e potrebbe derivare in silenzio. Ciò che il register dice del
-lavoro è quindi lo **stato**, non l'inventario: quale obiettivo è a regime,
-quale ha un fronte aperto, quale è un buco di misura.
-
-Una sezione **Goal di sviluppo** fotografa la posizione auspicata lungo le
-dimensioni comuni: è la casa per-adottante che `development-goal` chiedeva senza
-nominare.
-
-La **disciplina è costitutiva della forma**, non un accessorio di `bi`:
-
-- fotografia aggiornata in place come i fili, **non documento di aspirazioni**;
-- **custode umano dichiarato**: gli agenti propongono scostamenti, non
-  riscrivono il nord — è ciò che tiene il register dentro il vincolo «la KB
-  informa il Goal, non lo genera», e vale a maggior ragione nei domini a bassa
-  delegabilità, dove il motivo non è esternalizzabile;
-- ogni obiettivo ha almeno un **segnale vivo**; un obiettivo senza segnale è un
-  buco di misura da dichiarare, non da nascondere; un task senza obiettivo è un
-  candidato al taglio;
-- un obiettivo **a regime** — segnali vivi, lavoro assente — resta visibile come
-  voce: è informazione che prima non esisteva da nessuna parte, e se un segnale
-  peggiora il lavoro riapre da lì.
-
-La coppia di skill `exec`/`eval` controlla la cerniera dai due versanti
-(task→obiettivo in `exec plan`, obiettivo→segnale/filo in `eval compare` — cfr.
-`skill`). Il README resta la bussola: l'identità in una riga sta lì,
-l'articolazione del polo qui.
+Il contratto del register root che materializza questo polo vive in
+`goal-register`; qui resta il modello del Goal.
 
 ## Riferimenti
 
@@ -208,11 +128,13 @@ l'articolazione del polo qui.
   attività ↔ motivo, azione ↔ goal/scopo cosciente, operazione ↔ condizioni.
 - Donald Norman, _The Design of Everyday Things_, Revised and Expanded Edition
   (2013), Cap. 2 — il Goal come apice del ciclo a sette stadi; cfr.
-  `action-cycle`.
+  `action-cycle`. Provenienza e limite di disponibilità corrente sono dichiarati
+  nel register `world.md`.
 
 Connessioni:
 
 - [action-cycle](action-cycle.md)
+- [goal-register](goal-register.md)
 - [development-goal](development-goal.md)
 - [development-meta-cycle](development-meta-cycle.md)
 - [input](input.md)

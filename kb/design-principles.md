@@ -73,18 +73,12 @@ puntato dal README. La distinzione tra principi universali e principi locali va
 resa esplicita: il lettore deve poter capire a colpo d'occhio cosa appartiene al
 metodo condiviso e cosa è scelta del singolo progetto.
 
-Esempi osservati di principi specifici, non l'inventario degli adottanti:
-
-- **nixos**: Home Manager standalone (timeline sistema/utente disaccoppiate),
-  Explicit Unfree (nessun software non-libero entra silenziosamente),
-  Hardware-Specific (moduli hardware corrispondono all'hardware reale)
-- **bi**: Sincronizzazione graduale / Eventual consistency (gli aggiornamenti si
-  propagano gradualmente con meccanismi di riprova), Isolamento degli errori /
-  Graceful degradation (un errore su un elemento non blocca l'intero processo),
-  Tracciabilità operativa (ogni elaborazione automatica produce un log
-  strutturato con riepilogo via email)
-- **salute**: teoria verificata nella pratica, corpo e mente come unico campo,
-  fonti come mappe, diario come materiale grezzo per filing back
+Le configurazioni ricorrenti mostrano la forma senza duplicare gli adottanti:
+un progetto dichiarativo può vincolare software e hardware ammessi; una
+pipeline può scegliere consistenza eventuale, isolamento degli errori e log
+strutturati; un dominio riflessivo può subordinare la teoria alla pratica e
+trattare il diario come grezzo per il filing back. I nomi, lo stato e
+l'incarnazione corrente di questi principi restano nei repository di dominio.
 
 ## Principi per lo strato output
 

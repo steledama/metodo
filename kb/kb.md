@@ -53,16 +53,17 @@ I conteggi e i segnali si rigenerano con `o3/kb_tools.py audit`.
   tra artefatto, umano e LLM; tripartizione artefatto/sistema/metodo; asimmetria
   degli agenti
 - [goal](goal.md) — Gerarchia motivo/goal/operazione (Leontiev): il goal come
-  confine aperto di Norman; KB informa il goal senza generarlo; register root
-  `goal.md` (obiettivi con segnali e stato del lavoro, la direzione
-  task→obiettivo nella colonna `Ob.` del plan; custode umano)
+  confine aperto di Norman e la KB che lo informa senza generarlo
+- [goal-register](goal-register.md) — Contratto del polo Goal in root: obiettivi,
+  segnali, stato del lavoro, custodia umana e direzione task→obiettivo
 - [development-goal](development-goal.md) — Il polo Goal del ciclo di sviluppo:
   dimensioni comuni (attrito, autonomia, temporalità) e posizione auspicata; il
   dominio sceglie la gradualità, non le dimensioni
 - [world](world.md) — Membrana fisica non versionata al fondo del ciclo; i1 e o3
-  sono i suoi riflessi versionati on-demand; register root `world.md`
-  (territorio, superfici, fonti — assorbe map e sources) e criterio del
-  significato senza artefatto
+  sono i suoi riflessi versionati on-demand e il significato senza artefatto ne
+  discrimina il contenuto
+- [world-register](world-register.md) — Contratto del polo World in root:
+  territorio, superfici, provenienza, disponibilità e limiti delle fonti
 - [development-meta-cycle](development-meta-cycle.md) — Il meta-ciclo che
   modifica la macchina usata dal runtime
 - [action-cycle-matrix](action-cycle-matrix.md) — Protocollo falsificabile per

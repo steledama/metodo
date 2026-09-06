@@ -59,7 +59,9 @@ Regola pratica:
 
 - se il contenuto serve a capire un concetto, va in kb/
 - se serve a fare una cosa futura, va in `o1/plan.md` o in `o2/`
-- se spiega una decisione già presa, va in un filo `i3/`
+- se conserva il giudizio corrente su una tensione aperta, va in un filo `i3/`;
+  se la decisione è stabilizzata e cambia il comportamento futuro, risale nella
+  KB
 - se istruisce un agente, va in CLAUDE.md o in una skill
 - se orienta il lettore, va in README.md
 - se è una sintesi, una vista d'insieme o un dashboard, va nello strato output

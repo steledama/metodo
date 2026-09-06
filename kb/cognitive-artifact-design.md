@@ -84,6 +84,7 @@ Le responsabilità operative hanno case autonome:
 - forma e manutenzione della conoscenza in `knowledge-base`, `node`,
   `connection` e `kb-tools`;
 - poli e archi del ciclo in `goal`, `world`, `input`, `output` e `action-cycle`;
+- contratti dei register in `goal-register` e `world-register`;
 - lavoro corrente in `plan`, `tasks` e `verdict`;
 - sviluppo e propagazione in `method-development` e `method-observatory`;
 - verifica semantica e fonti in `cognitive-fidelity` e `source-of-truth`.
@@ -100,6 +101,7 @@ Connessioni:
 - [cognitive-system](cognitive-system.md)
 - [augmentation-system](augmentation-system.md)
 - [world](world.md)
+- [world-register](world-register.md)
 - [input](input.md)
 - [processing-layers](processing-layers.md)
 - [system-image](system-image.md)
@@ -124,3 +126,4 @@ Connessioni:
 - [connection](connection.md)
 - [output](output.md)
 - [action-cycle](action-cycle.md)
+- [goal-register](goal-register.md)

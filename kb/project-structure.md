@@ -14,8 +14,8 @@ del dominio.
 - `README.md` — orientamento al dominio e accesso al cruscotto;
 - `CLAUDE.md` — regole operative per agenti;
 - `AGENTS.md` — wrapper agent-agnostico con ordine di lettura;
-- `goal.md` — direzione, obiettivi e segnali;
-- `world.md` — territorio, superfici esterne e fonti;
+- `goal.md` — direzione, obiettivi e segnali (`goal-register`);
+- `world.md` — territorio, superfici esterne e fonti (`world-register`);
 - `kb/` — conoscenza stabile, catalogata in `kb/kb.md`;
 - `presentation/` — home, viste generate e asset;
 - `i1/`, `i2/`, `i3/` — percezioni, interpretazioni e verdetti;
@@ -91,7 +91,9 @@ Connessioni:
 - [readme](readme.md)
 - [claude](claude.md)
 - [goal](goal.md)
+- [goal-register](goal-register.md)
 - [world](world.md)
+- [world-register](world-register.md)
 - [plan](plan.md)
 - [tasks](tasks.md)
 - [verdict](verdict.md)

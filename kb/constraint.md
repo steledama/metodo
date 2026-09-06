@@ -38,12 +38,10 @@ nuovo creato dal vincolo: è lavoro dovuto che diventa esigibile.
 Il vincolo è il presidio strutturale che regge quando il livello riflessivo
 cede. Nei tre livelli di Norman il check «ricordarsi di» vive in alto, dove
 l'attenzione è scarsa e intermittente; il vincolo vive sotto, nella struttura, e
-non dipende dal ricordo. È la lezione del deploy della presentazione rotto da un
-rename: mancava un vincolo — niente forzava «servito = repo» — così il guasto è
-stato silenzioso. Un vincolo (un symlink che lega servito e sorgente, un test
-che fallisce, uno schema) lo avrebbe reso impossibile o rumoroso. La regola di
-progetto che ne segue: dove un errore conta, non affidarsi alla memoria di un
-agente, ma costruire il vincolo che lo intercetta.
+non dipende dal ricordo. Se una sorgente rinominata può lasciare una copia
+servita divergente, il rapporto va reso meccanico con un unico path, un test che
+fallisce o uno schema. Dove un errore conta, non affidarsi alla memoria di un
+agente: costruire il vincolo che lo rende impossibile o rumoroso.
 
 Connessioni:
 

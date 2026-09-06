@@ -30,7 +30,8 @@ coinvolgimento, non come ornamento.
 
 - Donald Norman, _Emotional Design_ (Basic Books, 2004) — i tre livelli di
   elaborazione, modello sviluppato con Andrew Ortony e William Revelle.
-  Provenienza nella sezione fonti del register `world.md`.
+  Provenienza nella sezione fonti del register `world.md`; la copia primaria
+  usata per la distillazione non è osservabile nella superficie locale corrente.
 
 Connessioni:
 
